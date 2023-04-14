@@ -1,0 +1,105 @@
+<html>
+<title>Login</title>
+<head>
+    <link rel="stylesheet" href="css/log.css">
+    <script type="text/javascript">
+     var x = document.getElementById("Login");
+     var y = document.getElementById("SignUp");
+     var z = document.getElementById("btn");
+    //  function SignUp()
+    //  {
+    //     x.style.left="-400px";
+    //     y.style.left="50px";
+    //     z.style.left="110px";
+    // }
+    function Login()
+    {
+        x.style.left="50px";
+        y.style.left="450px";
+        z.style.left="0";
+    }
+    // function display(){
+    //     alert("Enter a valid Gmail!!");  /*Used onclick event*/ 
+    // }
+    // function display1(){
+    //     alert("Logged In Successsfully!!");    /*Used onclick event*/
+    // }
+    // function display2(){
+    //     alert("Visit Our Facebook Page!!");   /*Used onmouseup event*/
+    // }
+    // function display3(){
+    //     alert("Visit Our Instagram Page!!");   /*Used onmousemove event*/
+    // }
+    // function display4(){
+    //     alert("Visit Our LinkedIn Page!!");   /*Used onmouseout event*/
+    // }
+    // function display5(){
+    //     alert("Visit Our Git Hub Page!!");   /*Used onmouseout event*/
+    // }
+    function validation1(){
+
+  var username=document.getElementById("uname").value;  ///get id with value 
+  var usernamepattern=["admin"];   ////Regular expression for username size(3-15)
+  var pass=document.getElementById("myInput").value
+  var passpattern=["admin"];
+  if((username==usernamepasspattern[0])&&(pass==passpattern[0]))
+  { 
+    alert("Login Success")
+    window.location='index.html'
+}
+else{
+   alert("Invalid Credentials.")
+}
+}
+
+// function validation2(){
+
+//   var username=document.getElementById("uname").value;  ///get id with value 
+//   var usernamepattern=/^[A-Za-z .]{3,15}$/;   ////Regular expression for username size(3-15)
+//   var pass=document.getElementById("myInput").value
+//   var passpattern=/^[A-Za-z0-9]\w{8,}$/;
+//   if((usernamepattern.test(username))&&(passpattern.test(pass)))
+//   { 
+//     alert("Login Success")
+//     window.location='index.html'
+// }
+// else{
+//    alert("Invalid Credentials. Username must contain more then 3 charachters and Passsword must contain a-z, A-Z ,number and length should be more than 8 chars.")
+//    window.location='index.html'
+// }
+// }
+</script>
+</head>
+</html>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Login()">Log In To Connect to the Server.</button>
+                <!-- <button type="button" class="toggle-btn" onclick="SignUp()">Sign up</button> -->
+            </div>
+            <!-- <div class="social-icons">
+                <img src="facebook.png" onmouseup="display2()">
+                <img src="instagram.png" onmousemove="display3()">
+                <img src="linkedin.png" onmouseout="display4()">
+                <img src="github.png" onmouseout="display5()">
+            </div> -->
+            <form id="Login" class="input-group">
+                <input type="text" class="input-field" placeholder="Username" id="uname"> <!--required can also be used for(please fill out this field)-->
+                <input type="password" class="input-field" placeholder="Password" id="myInput">
+                <!-- <input type="checkbox" class="check-box"><span>Remember Password</span><br> -->
+                <button type="submit"  class="submit-btn" onclick="validation1()">Log In</button><br>
+                <button type="reset"  class="reset-btn">Reset</button>
+            </form>
+            <!-- <form id="SignUp" class="input-group">
+                <input type="mail" class="input-field" placeholder="Username" id="uname">
+                <input type="password" class="input-field" placeholder="Password" id="myInput">
+                <input type="password" class="input-field" placeholder="Confirm Password"><br><br>
+                <button type="submit"  class="submit-btn" onclick="validation2()">Sign Up</button><br>
+                <button type="reset"  class="reset-btn">Reset</button>
+            </form> -->
+        </div>
+    </div>
+</body>
+</html>
